@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Lyrics - Busca tu canción y letra</title>
+</head>
+<body>
+    <header>
+        <div>            
+            <p><h3>
+            Lyrics  - Busca tu cancion y su letra...
+            </h3></p>
+            <p>Lenio BootCamp 2021 - Julio Añez</p>
+        </div>
+    </header>
+    <div class="contenedor">
+        <div class="formulario">
+                <p><h2>Indique el titulo y autor de la cancion...</h2></p>
+                <form id="formulario">
+                    <input type="text" name="autor" id="autor" placeholder="Autor a buscar" required>
+                    <input type="text" name="titulo" id="titulo" placeholder="Título de la canción a buscar" required>
+
+                    <input type="button" class="btn2" onclick="buscarCancion()" value="Buscar Cancion">
+                    <input type="button" class="btn2" onclick='limpiar()' value="Reset">  
+                    <input type="button" class="btn2" onclick="verAyuda()" value="Ayuda" >
+                </form>
+        </div>
+        
+        <div class="vista">
+            <p id="artista"><h2>Letra de la cancion</h2></p><hr>
+            <div id="contenido">
+        </div>
+            
+        </div>
+        <div class="mensaje" id="mensaje">
+            <div id="msg"></div>
+            <div class="donut"></div>
+        </div>
+        <div id="ayuda"> 
+            <section class="info">
+                <details>
+                    <summary>Artista: Coldplay</summary>
+
+
+                    <pre>
+                
+                    In my place
+                    adventure of a lifetime
+                    Yellow
+                    The Scientist
+                    Viva La Vida
+                    Sparks
+                
+
+                    </pre>
+                </details>
+
+                <details>
+                    <summary>Artista: Celine Dion</summary>
+                    <pre>
+                
+                    Aun existe amor
+                    Alone
+                    I love You
+                    The reasons
+
+
+
+                    </pre>
+                </details>
+
+                <details>
+                    <summary>Artista: Michael Jackson</summary>
+                    <pre>
+
+                    Thriller
+                    Billie Jean
+                    Man in the mirror
+                    Black or white
+                    Beat it
+
+                    </pre>
+                </details>
+            </section>
+            <input type="button" class="btn" onclick="cerrar()" value="Cerrar">
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+</html>
