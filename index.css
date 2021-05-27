@@ -22,16 +22,10 @@ header {
 .formulario {
     width: 400px;
     height: 600px;
-    width: 400px;
-    height: 600px;
     margin: 20px;
     padding: 20px;
     background-color: #bb8a41;
-    border-radius: 4%;
-    margin: 20px;
-    padding: 20px;
-    background-color: #bb8a41;
-    border-radius: 4%;
+    border-radius: 20px;
 }
 form {
      display: flex;

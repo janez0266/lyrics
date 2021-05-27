@@ -4,6 +4,9 @@
 
 var letra = []; 
 
+fetch("ayuda.html")
+.then(response =>response.text())
+.then(ayuda => document.querySelector(".info").innerHTML = ayuda)
 
 function buscarCancion() {
     
@@ -41,8 +44,7 @@ function mostrarLetra(data, autor, titulo) {
     document.querySelector(".btn2").disabled = false;
     document.getElementById("mensaje").style.display = "none";
     document.getElementById("artista").innerHTML = `<h1>Autor: ${autor} - Título: ${titulo}</h1>`;
-    document.getElementById("contenido").setAttribute('style', 'white-space: pre;');
-    document.getElementById("contenido").innerHTML = data['lyrics'];
+    document.getElementById("contenido").innerHTML = data['lyrics'].replace(/\r/g, '').replace(/\n/g, '<br>');;
     console.log(data['lyrics'])
     
 }
